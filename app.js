@@ -43,3 +43,24 @@
 //     changeCategory(e, buttonsHot, hotCourses, indexOfSelectedCategoryOfCourses);
 //   });
 // });
+
+const footerLanguagesButton = document.querySelector(
+  ".footer_languages_button"
+);
+
+const footerLanguagesSelector = document.querySelector(
+  ".footer_languages_selector"
+);
+
+footerLanguagesButton.addEventListener("click", () => {
+  footerLanguagesSelector.classList.toggle("footer_languages_selector--show");
+});
+
+window.addEventListener("click", (e) => {
+  if (
+    !e.target.closest(".footer_languages_button") &&
+    !e.target.closest(".footer_languages_selector_button")
+  ) {
+    footerLanguagesSelector.classList.remove("footer_languages_selector--show");
+  }
+});
