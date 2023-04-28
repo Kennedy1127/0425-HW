@@ -44,6 +44,35 @@
 //   });
 // });
 
+///////////////////////////////////////////////////
+const allRecommendClassesCards = document.querySelectorAll(
+  ".recommend-classes_cards"
+);
+const numOfAllRecommendClassesCards = allRecommendClassesCards.length;
+let currentRecommendClassesCards = 0;
+
+const recommendClassesButtonRight = document.querySelector(
+  ".recommend-classes_button--right"
+);
+const recommendClassesButtonLeft = document.querySelector(
+  ".recommend-classes_button--left"
+);
+
+const recommendClassesCardsInit = () => {};
+
+const recommendClassesMoveRight = () => {};
+
+const recommendClassesMoveLeft = () => {};
+
+recommendClassesButtonRight.addEventListener("click", () => {
+  recommendClassesMoveRight();
+});
+
+recommendClassesButtonLeft.addEventListener("click", () => {
+  recommendClassesMoveLeft();
+});
+///////////////////////////////////////////////////
+
 const footerLanguagesButton = document.querySelector(
   ".footer_languages_button"
 );
@@ -64,3 +93,8 @@ window.addEventListener("click", (e) => {
     footerLanguagesSelector.classList.remove("footer_languages_selector--show");
   }
 });
+
+const init = () => {
+  recommendClassesCardsInit();
+};
+init();
